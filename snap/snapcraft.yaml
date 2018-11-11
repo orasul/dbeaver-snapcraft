@@ -19,4 +19,4 @@ parts:
   dbeaver-ce:
     source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.4/standalone/dbeaver-ce-5.2.4-linux.gtk.x86_64.tar.gz
     plugin: dump
-    stage-packages: [openjdk-8-jre]
+    stage-packages: [openjdk-8-jre-headless]
