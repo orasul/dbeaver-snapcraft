@@ -1,0 +1,22 @@
+name: dbeaver-ce
+version: '5.2.4'
+summary: Universal Database Tool
+description: |
+  Free multi-platform database tool for developers, SQL programmers,
+  database administrators and analysts. Supports all popular databases
+  MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase,
+  MS Access, Teradata, Firebird, Derby, etc.
+
+apps:
+  dbeaver:
+    command: dbeaver
+    environment:
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64
+      PATH: $JAVA_HOME/jre/bin:$PATH
+    aliases: [dbeaver]
+
+parts:
+  dbeaver-ce:
+    source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.4/standalone/dbeaver-ce-5.2.4-linux.gtk.x86_64.tar.gz
+    plugin: dump
+    stage-packages: [openjdk-8-jre]
