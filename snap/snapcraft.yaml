@@ -11,8 +11,8 @@ apps:
   dbeaver:
     command: dbeaver
     environment:
-      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64
-      PATH: $JAVA_HOME/jre/bin:$PATH
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-9-openjdk-amd64
+      PATH: $JAVA_HOME/bin:$PATH
     aliases: [dbeaver]
 
 parts:
