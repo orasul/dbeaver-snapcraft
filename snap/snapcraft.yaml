@@ -8,9 +8,7 @@ description: |
   MS Access, Teradata, Firebird, Derby, etc.
 
 architectures:
-  - build-on:
-    - amd64
-    - i386
+  - build-on: [amd64, i386]
 
 apps:
   dbeaver:
