@@ -7,6 +7,11 @@ description: |
   MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase,
   MS Access, Teradata, Firebird, Derby, etc.
 
+architectures:
+  - build-on:
+    - amd64
+    - i386
+
 apps:
   dbeaver:
     command: dbeaver
@@ -17,7 +22,8 @@ apps:
 
 parts:
   dbeaver-ce:
-    source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.5/standalone/dbeaver-ce-5.2.5-linux.gtk.x86_64.tar.gz
+    source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.5/standalone/dbeaver-ce_5.2.5_amd64.deb
+    source-type: deb
     plugin: dump
     build-packages:
       - ca-certificates
