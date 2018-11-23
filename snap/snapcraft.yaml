@@ -21,10 +21,11 @@ apps:
 
 parts:
   dbeaver-ce:
+    source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.5/standalone/dbeaver-ce-5.2.5-linux.gtk.x86_64.tar.gz
+    plugin: dump
     build-packages:
       - ca-certificates
       - ca-certificates-java
       - openjdk-9-jre-headless
     stage-packages:
       - openjdk-9-jre-headless
-      - dbeaver-ce
