@@ -8,7 +8,8 @@ description: |
   MS Access, Teradata, Firebird, Derby, etc.
 
 architectures:
-  - amd64
+  - build-on: amd64
+    run-on: [amd64, i386]
 
 apps:
   dbeaver:
@@ -20,12 +21,10 @@ apps:
 
 parts:
   dbeaver-ce:
-    source: http://build.dev.dbeaver.com/builds/releases/ce/5.2.5/standalone/dbeaver-ce_5.2.5_amd64.deb
-    source-type: deb
-    plugin: dump
     build-packages:
       - ca-certificates
       - ca-certificates-java
       - openjdk-9-jre-headless
     stage-packages:
       - openjdk-9-jre-headless
+      - dbeaver-ce
