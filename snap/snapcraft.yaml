@@ -26,6 +26,7 @@ parts:
     build-packages:
       - ca-certificates
       - ca-certificates-java
-      - openjdk-9-jre-headless
+      - openjdk-8-jre
     stage-packages:
-      - openjdk-9-jre-headless
+      - openjdk-8-jre
+      - libgtk-3-0
